@@ -42,3 +42,4 @@ student_profile = {
     "grade": grade
 }
 
+student_key = f"student no.{len(student_directory) +1}"

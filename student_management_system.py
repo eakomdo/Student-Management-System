@@ -48,3 +48,6 @@ print(student_key)
 
 student_directory[student_key] = student_profile
 print(student_directory)
+
+# Displaying the student profile
+print(f"\nStudent Profile:\nName: {student_profile['name']}\nAge: {student_profile['age']}\nSubject: {student_profile['subject']}\nGrade: {student_profile['grade']:.2f}")

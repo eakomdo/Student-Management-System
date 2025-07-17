@@ -47,3 +47,4 @@ student_key = f"student no.{len(student_directory) +1}"
 print(student_key)
 
 student_directory[student_key] = student_profile
+print(student_directory)

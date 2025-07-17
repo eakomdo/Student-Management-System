@@ -142,43 +142,150 @@ if input("Do you want to add another student? (yes/no): ").strip().lower() == 'y
                     student_directory[student_key] = student_profile
                     print(f"\nNew Student Profile Added:\n{student_directory}")
 
-# Calculate average grades and check scholarship eligibility
+# Calculate average grades
 print("\n" + "="*50)
 if input("Do you want to calculate average grades? (yes/no): ").strip().lower() == 'yes':
     if student_directory:
-        total_grade = sum(student['grade'] for student in student_directory.values())
-        average_grade = total_grade / len(student_directory)
-
-        if average_grade >= 50:
-            print(f"Average Grade: {average_grade:.2f} - Status: Passed")
-        else:
-            print(f"Average Grade: {average_grade:.2f} - Status: Failed")
+        # Manual calculation without for loop
+        total_grade = 0
+        student_count = 0
+        
+        # Check each possible student manually
+        if 'student no.1' in student_directory:
+            total_grade += student_directory['student no.1']['grade']
+            student_count += 1
+        if 'student no.2' in student_directory:
+            total_grade += student_directory['student no.2']['grade']
+            student_count += 1
+        if 'student no.3' in student_directory:
+            total_grade += student_directory['student no.3']['grade']
+            student_count += 1
+        if 'student no.4' in student_directory:
+            total_grade += student_directory['student no.4']['grade']
+            student_count += 1
+        if 'student no.5' in student_directory:
+            total_grade += student_directory['student no.5']['grade']
+            student_count += 1
+        if 'student no.6' in student_directory:
+            total_grade += student_directory['student no.6']['grade']
+            student_count += 1
+        
+        if student_count > 0:
+            average_grade = total_grade / student_count
+            if average_grade >= 50:
+                print(f"Average Grade: {average_grade:.2f} - Status: Passed")
+            else:
+                print(f"Average Grade: {average_grade:.2f} - Status: Failed")
     else:
         print("No students in the directory to calculate average.")
 
 # Check scholarship eligibility
 print("\n" + "="*50)
 if input("Do you want to check scholarship eligibility? (yes/no): ").strip().lower() == 'yes':
-    eligible_students = []
-    for student_id, student_info in student_directory.items():
-        if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            eligible_students.append(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+    print("\nScholarship Eligibility Check (Age 14+ and Grade 70+):")
+    eligible_count = 0
     
-    if eligible_students:
-        print("\nScholarship Eligible Students (Age 14+ and Grade 70+):")
-        for student in eligible_students:
-            print(f"- {student}")
-    else:
-        print("No students are eligible for scholarship (requirements: Age 14+ and Grade 70+)")
+    # Check each student individually
+    if 'student no.1' in student_directory:
+        student_info = student_directory['student no.1']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if 'student no.2' in student_directory:
+        student_info = student_directory['student no.2']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if 'student no.3' in student_directory:
+        student_info = student_directory['student no.3']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if 'student no.4' in student_directory:
+        student_info = student_directory['student no.4']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if 'student no.5' in student_directory:
+        student_info = student_directory['student no.5']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if 'student no.6' in student_directory:
+        student_info = student_directory['student no.6']
+        if student_info['age'] >= 14 and student_info['grade'] >= 70:
+            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            eligible_count += 1
+    
+    if eligible_count == 0:
+        print("❌ No students are eligible for scholarship")
 
 # Display all students
 print("\n" + "="*50)
 if input("Do you want to display all students? (yes/no): ").strip().lower() == 'yes':
     if student_directory:
         print("\nAll Students in the System:")
-        for student_id, student_info in student_directory.items():
+        
+        # Display each student individually
+        if 'student no.1' in student_directory:
+            student_info = student_directory['student no.1']
             status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
-            print(f"\n{student_id}:")
+            print(f"\nstudent no.1:")
+            print(f"  Name: {student_info['name']}")
+            print(f"  Age: {student_info['age']}")
+            print(f"  Subject: {student_info['subject']}")
+            print(f"  Grade: {student_info['grade']:.2f}")
+            print(f"  Status: {status}")
+        
+        if 'student no.2' in student_directory:
+            student_info = student_directory['student no.2']
+            status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
+            print(f"\nstudent no.2:")
+            print(f"  Name: {student_info['name']}")
+            print(f"  Age: {student_info['age']}")
+            print(f"  Subject: {student_info['subject']}")
+            print(f"  Grade: {student_info['grade']:.2f}")
+            print(f"  Status: {status}")
+        
+        if 'student no.3' in student_directory:
+            student_info = student_directory['student no.3']
+            status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
+            print(f"\nstudent no.3:")
+            print(f"  Name: {student_info['name']}")
+            print(f"  Age: {student_info['age']}")
+            print(f"  Subject: {student_info['subject']}")
+            print(f"  Grade: {student_info['grade']:.2f}")
+            print(f"  Status: {status}")
+        
+        if 'student no.4' in student_directory:
+            student_info = student_directory['student no.4']
+            status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
+            print(f"\nstudent no.4:")
+            print(f"  Name: {student_info['name']}")
+            print(f"  Age: {student_info['age']}")
+            print(f"  Subject: {student_info['subject']}")
+            print(f"  Grade: {student_info['grade']:.2f}")
+            print(f"  Status: {status}")
+        
+        if 'student no.5' in student_directory:
+            student_info = student_directory['student no.5']
+            status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
+            print(f"\nstudent no.5:")
+            print(f"  Name: {student_info['name']}")
+            print(f"  Age: {student_info['age']}")
+            print(f"  Subject: {student_info['subject']}")
+            print(f"  Grade: {student_info['grade']:.2f}")
+            print(f"  Status: {status}")
+        
+        if 'student no.6' in student_directory:
+            student_info = student_directory['student no.6']
+            status = "PASSED" if student_info['grade'] >= 50 else "FAILED"
+            print(f"\nstudent no.6:")
             print(f"  Name: {student_info['name']}")
             print(f"  Age: {student_info['age']}")
             print(f"  Subject: {student_info['subject']}")

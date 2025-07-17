@@ -67,4 +67,4 @@ if input("Do you want to add another student? (yes/no): ").strip().lower() == 'y
 
     student_key = f"student no.{len(student_directory) + 1}"
     student_directory[student_key] = student_profile
-    print(f"\nNew Student Profile Added:\n{student_directory[student_key]}")
+    print(f"\nNew Student Profile Added:\n{student_directory}")

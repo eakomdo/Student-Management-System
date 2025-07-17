@@ -51,3 +51,22 @@ print(student_directory)
 
 # Displaying the student profile
 print(f"\nStudent Profile:\nName: {student_profile['name']}\nAge: {student_profile['age']}\nSubject: {student_profile['subject']}\nGrade: {student_profile['grade']:.2f}")
+
+#Adding a new student profile to the directory
+
+if input("Do you want to add another student? (yes/no): ").strip().lower() == 'yes':
+    name = input("Enter student name: ")
+    age = int(input("Enter your age: "))
+    subject = input("Enter subject: ")
+    grade = float(input("Enter your grade: "))
+
+    student_profile = {
+        "name": name,
+        "age": age,
+        "subject": subject,
+        "grade": grade
+    }
+
+    student_key = f"student no.{len(student_directory) + 1}"
+    student_directory[student_key] = student_profile
+    print(f"\nNew Student Profile Added:\n{student_profile}")

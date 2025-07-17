@@ -16,9 +16,7 @@
     check eligibility for scholaship
 '''
 #Initialized our dictionary
-student_directory = {
-    'student no.1': {'name': 'Mike', 'age': 12, 'subject': 'Maths', 'grade': 76.0}
-}
+student_directory = {}
 
 
 print(" Welcome to Lavender Sudent Management System")

@@ -68,3 +68,15 @@ if input("Do you want to add another student? (yes/no): ").strip().lower() == 'y
     student_key = f"student no.{len(student_directory) + 1}"
     student_directory[student_key] = student_profile
     print(f"\nNew Student Profile Added:\n{student_directory}")
+else:
+    print("No new student added.")
+
+# Calculate the average grade and determine if the student has passed or failed.
+if student_directory:
+    total_grade = sum(student['grade'] for student in student_directory.values())
+    average_grade = total_grade / len(student_directory)
+
+    if average_grade >= 50:
+        print(f"Average Grade: {average_grade:.2f} - Status: Passed")
+    else:
+        print(f"Average Grade: {average_grade:.2f} - Status: Failed")

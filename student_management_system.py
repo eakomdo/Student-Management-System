@@ -189,41 +189,41 @@ if input("Do you want to check scholarship eligibility? (yes/no): ").strip().low
     if 'student no.1' in student_directory:
         student_info = student_directory['student no.1']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if 'student no.2' in student_directory:
         student_info = student_directory['student no.2']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if 'student no.3' in student_directory:
         student_info = student_directory['student no.3']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if 'student no.4' in student_directory:
         student_info = student_directory['student no.4']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if 'student no.5' in student_directory:
         student_info = student_directory['student no.5']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if 'student no.6' in student_directory:
         student_info = student_directory['student no.6']
         if student_info['age'] >= 14 and student_info['grade'] >= 70:
-            print(f"✅ {student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
+            print(f"{student_info['name']} (Age: {student_info['age']}, Grade: {student_info['grade']})")
             eligible_count += 1
     
     if eligible_count == 0:
-        print("❌ No students are eligible for scholarship")
+        print("No students are eligible for scholarship")
 
 # Display all students
 print("\n" + "="*50)

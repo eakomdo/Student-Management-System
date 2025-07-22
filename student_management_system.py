@@ -42,7 +42,7 @@ student_profile = {
 
 student_key = f"student no.{len(student_directory) +1}"
 
-print(student_key)
+#print(student_key)
 
 student_directory[student_key] = student_profile
 print(student_directory)
@@ -83,6 +83,7 @@ if input("Do you want to add another student? (yes/no): ").strip().lower() == 'y
             "subject": subject,
             "grade": grade
         }
+        
 
         student_key = f"student no.{len(student_directory) + 1}"
         student_directory[student_key] = student_profile
